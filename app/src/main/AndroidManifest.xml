@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+
+    <uses-feature android:name="android.hardware.camera.any" android:required="false" />
+    <!-- Pre-Android 13 -->
+    <uses-permission
+        android:name="android.permission.READ_EXTERNAL_STORAGE"
+        android:maxSdkVersion="32" />
+
+    <!-- Hardware features (optional so you don't exclude devices without a camera) -->
+
+    <!-- If you rely on autofocus (still optional) -->
+    <uses-feature
+        android:name="android.hardware.camera.autofocus"
+        android:required="false" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@drawable/aya_rental_logo"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/aya_rental_logo"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".presentation.splash_screen.SplashScreen"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".presentation.welcome_page.WelComeScreen"/>
+        <activity android:name=".presentation.login_page.LoginScreen"/>
+        <activity android:name=".presentation.signup_page.SignUpScreen"/>
+        <activity android:name=".presentation.signup_page.SignUpPageMain"/>
+        <activity android:name=".presentation.dashboad_screen.BottomNavigation"/>
+        <activity android:name=".presentation.selectCategoryScreeen.SelectCategoryScreen"/>
+        <activity android:name=".presentation.selectCategoryScreeen.SelectSubCategoryScreen"/>
+        <activity android:name=".presentation.cardetails.CarDetails"/>
+        <activity android:name=".presentation.carMoredetails.CarMoreDetails"/>
+        <activity android:name=".presentation.booking.BookingConfirmationActivity"/>
+        <activity android:name=".presentation.idetificationScreen.IdentificationScreen"/>
+        <activity android:name=".presentation.confirmationBookingScreen.ConfirmationBookingScreen"/>
+        <activity android:name=".presentation.successfullBookingScreen.SuccessFullBookingScreen"/>
+        <activity android:name=".presentation.appSettingsScreen.AppSettingsScreen"/>
+        <activity android:name=".presentation.editProfileScreen.EditProfileScreen"/>
+        <activity android:name=".presentation.customerSupport.CustomerSupportScreen"/>
+        <activity android:name=".presentation.comingSoon.ComingSoon"/>
+        <activity android:name=".presentation.faqs.FaqScreen"/>
+
+        <activity
+            android:name=".presentation.legal.TermsAndConditionsScreen"
+            android:exported="false"
+            android:parentActivityName=".presentation.signup_page.SignUpScreen" />
+
+        <activity
+            android:name=".presentation.legal.PrivacyPolicyActivity"
+            android:exported="false"
+            android:parentActivityName=".presentation.signup_page.SignUpScreen" />
+
+    </application>
+
+</manifest>

@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.sapotos.ayarental.presentation.welcome_page.WelComeScreen_View_Model" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- Rounded card like the mock -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/welcomeCard"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clipToPadding="false"
+                android:clipChildren="false">
+
+
+                <ImageView
+                    android:id="@+id/imgWave"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:srcCompat="@drawable/bg_welcome_wave"
+                    android:scaleType="fitXY"
+                    tools:ignore="ContentDescription" />
+
+
+
+                <ImageView
+                    android:id="@+id/imgCar"
+                    android:layout_width="180dp"
+                    android:layout_height="130dp"
+                    android:layout_gravity="top|start"
+                android:layout_marginTop="@dimen/app_spacing_85dp"
+                android:adjustViewBounds="true"
+                android:scaleType="fitStart"
+                app:srcCompat="@drawable/clear_car_image"
+                tools:ignore="ContentDescription" />
+
+                <!-- 2) Road lines ON TOP of wave -->
+
+
+                <!-- 5) Center content -->
+                <LinearLayout
+                    android:id="@+id/content"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_horizontal"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:paddingStart="24dp"
+                    android:paddingEnd="24dp"
+                    android:layout_marginTop="260dp">
+
+                    <TextView
+                        android:id="@+id/tvTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/quote_your_pickup_or_ride_at_na_low_price"
+                        android:textAlignment="center"
+                        android:textColor="#B23A2B"
+                        android:textStyle="bold"
+                        android:textSize="24sp" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnSignUp"
+                        style="@style/Widget.Material3.Button"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:layout_marginTop="20dp"
+                        android:text="@string/sign_up"
+                        android:textAllCaps="false"
+                        android:layout_marginHorizontal="@dimen/app_spacing_20dp"
+                        android:textSize="16sp"
+                        app:cornerRadius="24dp"
+                        app:backgroundTint="#D64B3D" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnLogin"
+                        style="@style/Widget.Material3.Button"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginHorizontal="@dimen/app_spacing_20dp"
+                        android:text="@string/login"
+                        android:textAllCaps="false"
+                        android:textSize="16sp"
+                        app:cornerRadius="24dp"
+                        app:backgroundTint="#6A4DFF" />
+                </LinearLayout>
+            </FrameLayout>
+        </com.google.android.material.card.MaterialCardView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

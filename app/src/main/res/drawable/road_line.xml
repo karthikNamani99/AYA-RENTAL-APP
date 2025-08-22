@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    android:width="360dp"
+    android:height="220dp"
+    android:viewportWidth="360"
+    android:viewportHeight="150">
+
+    <!-- White background -->
+    <path
+        android:fillColor="#FFFFFFFF"
+        android:pathData="M0,0 H360 V220 H0 Z" />
+
+    <!-- Light gray road line (reversed slope) -->
+    <path
+        android:pathData="M-10,14 L360,84 360,104 -10,34 Z">
+        <aapt:attr name="android:fillColor">
+            <gradient
+                android:type="linear"
+                android:startX="0"
+                android:startY="14"
+                android:endX="0"
+                android:endY="104">
+                <item android:offset="0" android:color="#EDEDED"/>
+                <item android:offset="1" android:color="#DADADA"/>
+            </gradient>
+        </aapt:attr>
+    </path>
+
+    <!-- Yellow road line (reversed slope) -->
+    <path
+        android:pathData="M-10,58 L360,138 360,163 -10,83 Z">
+        <aapt:attr name="android:fillColor">
+            <gradient
+                android:type="linear"
+                android:startX="0"
+                android:startY="58"
+                android:endX="0"
+                android:endY="150">
+                <item android:offset="0" android:color="#FFF2C042"/>
+                <item android:offset="1" android:color="#FFE0A11B"/>
+            </gradient>
+        </aapt:attr>
+    </path>
+
+</vector>

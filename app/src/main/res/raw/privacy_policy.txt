@@ -1,0 +1,37 @@
+Privacy Policy for AYA Rental App
+Effective Date: [Insert Date]
+
+This Privacy Policy explains how AYA Rental collects, uses, shares, and protects your personal information when you use our mobile app and services.
+
+1. Information We Collect
+We may collect the following types of information:
+• Personal Info: Name, email address, phone number, driver’s license, date of birth.
+• Payment Info: Credit/debit card details (processed via secure third-party payment gateway).
+• Location Data: GPS location for vehicle tracking and service delivery.
+• Usage Data: App interactions, device type, operating system.
+
+2. How We Use Your Information
+We use your data to:
+• Create and manage user accounts.
+• Process bookings and payments.
+• Communicate with you about your reservations.
+• Improve app functionality and user experience.
+• Comply with legal requirements.
+
+3. Sharing of Information
+We may share your information with:
+• Service providers (e.g., payment processors, customer support).
+• Law enforcement or regulatory authorities if required by law.
+• Insurance providers in case of accidents or damage claims.
+
+4. Data Security
+We implement reasonable security measures to protect your information. However, no method of transmission over the internet is 100% secure.
+
+5. Data Retention
+We retain your personal data for as long as necessary to fulfill the purposes outlined in this policy, unless a longer retention period is required by law.
+
+6. Your Rights
+Depending on your jurisdiction, you may have rights to access, correct, or delete your personal data. Contact us at [Insert Email] to make a request.
+
+7. Cookies & Tracking
+The App may use cookies and similar technologies to enhance your experience and gather usage analytics.

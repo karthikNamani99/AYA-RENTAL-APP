@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="item"
+            type="com.sapotos.ayarental.presentation.profile.BookingItem" />
+    </data>
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        app:cardCornerRadius="16dp"
+        app:cardUseCompatPadding="true"
+        app:cardBackgroundColor="@android:color/white">
+
+        <LinearLayout
+            android:padding="12dp"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:text="@{item.carName}"
+                        android:textStyle="bold"
+                        android:textSize="16sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        tools:text="Mercedes-Benz"/>
+
+                    <TextView
+                        android:text='@{"Booking id " + item.bookingId}'
+                        android:textSize="12sp"
+                        android:textColor="#777"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        tools:text="Booking id CZ2215"/>
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/imgCar"
+                    android:layout_width="86dp"
+                    android:layout_height="52dp"
+                    android:scaleType="fitCenter"
+                    app:srcCompat='@{item.imageRes}'
+                    tools:src='@drawable/suv'/>
+
+
+                <ImageButton
+                    android:id="@+id/btnDelete"
+                    style="?attr/borderlessButtonStyle"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    app:srcCompat='@drawable/ic_close'/>
+            </LinearLayout>
+
+            <Space
+                android:layout_width="1dp"
+                android:layout_height="6dp"/>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    app:srcCompat='@drawable/ic_location_on'
+                    app:tint="#2E7D32"/>
+
+                <TextView
+                    android:text='@{item.address}'
+                    android:layout_marginStart="6dp"
+                    android:textSize="12sp"
+                    android:textColor="#666"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:text="2464 Royal Ln. Mesa, New Jersey 45463"/>
+            </LinearLayout>
+
+            <Space
+                android:layout_width="1dp"
+                android:layout_height="6dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Trip Start"
+                        android:textSize="12sp"
+                        android:textColor="#888"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text='@{item.startLabel}'
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        tools:text="Sat, 7 June, 5:30pm"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Trip End"
+                        android:textSize="12sp"
+                        android:textColor="#888"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text='@{item.endLabel}'
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        tools:text="Mon, 9 June, 6:30pm"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:text='@{"Paid " + item.paidLabel}'
+                android:textStyle="bold"
+                tools:text="Paid $660"/>
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+</layout>

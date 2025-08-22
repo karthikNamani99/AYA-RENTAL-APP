@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:bind="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.sapotos.ayarental.presentation.fragments.profile.ProfileFragment_View_Model" />
+    </data>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#F4F5F7"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <!-- Title -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/profile"
+                        android:textStyle="bold"
+                        android:textSize="20sp"/>
+
+                    <!-- Header: avatar + name + phone -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:layout_marginTop="12dp">
+
+                        <com.google.android.material.imageview.ShapeableImageView
+                            android:layout_width="56dp"
+                            android:layout_height="56dp"
+                            app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.Material3.Corner.Bottom"
+                            app:srcCompat="@android:drawable/sym_def_app_icon" />
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_marginStart="12dp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/tvName"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text='@{viewModel.name}'
+                                android:textStyle="bold"
+                                android:textSize="16sp" />
+
+                            <TextView
+                                android:id="@+id/tvPhone"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text='@{viewModel.phone}'
+                                android:textColor="#757575"
+                                android:textSize="13sp" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <!-- Rows (list) -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginTop="12dp">
+
+                        <include
+                            android:id="@+id/rowEditProfile"
+                            layout="@layout/row_profile_item"
+                            bind:rowIcon='@{ @android:drawable/ic_menu_edit }'
+                            bind:rowText='@{ @string/edit_profile }'/>
+
+                        <include
+                            android:id="@+id/rowMyBooking"
+                            layout="@layout/row_profile_item"
+                            bind:rowIcon='@{@android:drawable/ic_menu_agenda}'
+                            bind:rowText='@{@string/my_booking}'/>
+
+                        <include
+                            android:id="@+id/rowNotifications"
+                            layout="@layout/row_profile_item"
+                            bind:rowIcon='@{@android:drawable/ic_popup_reminder}'
+                            bind:rowText='@{@string/notifications}'/>
+
+                        <include
+                            android:id="@+id/rowSettings"
+                            layout="@layout/row_profile_item"
+                            bind:rowIcon='@{@android:drawable/ic_menu_preferences}'
+                            bind:rowText='@{@string/settings}'/>
+
+                        <include
+                            android:id="@+id/rowTerms"
+                            layout="@layout/row_profile_item"
+                            bind:rowIcon='@{@android:drawable/ic_menu_info_details}'
+                            bind:rowText='@{@string/terms_and_conditions}'/>
+
+                        <include
+                            android:id="@+id/rowFaq"
+                            layout="@layout/row_profile_item"
+                            bind:rowIcon='@{@android:drawable/ic_menu_help}'
+                            bind:rowText='@{@string/faqs}'/>
+
+                        <include
+                            android:id="@+id/rowSupport"
+                            layout="@layout/row_profile_item"
+                            bind:rowIcon='@{@android:drawable/ic_menu_call}'
+                            bind:rowText='@{@string/customer_support}'/>
+
+                        <include
+                            android:id="@+id/rowRate"
+                            layout="@layout/row_profile_item"
+                            bind:rowIcon='@{@android:drawable/btn_star_big_off}'
+                            bind:rowText='@{@string/rate_us}'/>
+
+                        <include
+                            android:id="@+id/rowLogout"
+                            layout="@layout/row_profile_item"
+                            bind:rowIcon='@{@android:drawable/ic_delete}'
+                            bind:rowText='@{@string/logout}'
+                            bind:rowTextColor='@{@android:color/holo_red_dark}'/>
+                    </LinearLayout>
+                </LinearLayout>
+
+            <!-- spacer for bottom nav -->
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="24dp"/>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</layout>

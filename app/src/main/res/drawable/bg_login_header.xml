@@ -1,0 +1,33 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="360dp"
+    android:height="280dp"
+    android:viewportWidth="360"
+    android:viewportHeight="280">
+
+    <!-- Main panel: rectangle on top, semicircle at the bottom -->
+    <!-- Rectangle down to y=140, then a semicircle of radius 140 centered at (180,280-140=140+140=280?) -->
+    <!-- This draws straight sides and a perfect half-circle bulging downward -->
+    <path
+        android:fillColor="#E84D73"
+    android:pathData="
+    M0,0
+    H360
+    V140
+    A140,140 0 0 1 180,280
+    A140,140 0 0 1 0,140
+    Z" />
+
+    <!-- Optional right-side shading (gives that folded/3D look) -->
+    <path
+        android:fillColor="#00000010"
+    android:pathData="
+    M300,0
+    H360
+    V140
+    A140,140 0 0 1 180,280
+    L180,280
+    A140,140 0 0 0 300,140
+    Z" />
+
+
+</vector>

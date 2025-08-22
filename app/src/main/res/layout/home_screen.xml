@@ -1,0 +1,529 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.sapotos.ayarental.presentation.fragments.homeScreen.HomeFragment_View_Model" />
+    </data>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:background="@android:color/white">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                app:cardUseCompatPadding="true"
+                app:cardCornerRadius="16dp"
+                app:cardPreventCornerOverlap="true"
+                app:contentPadding="16dp"
+                android:elevation="8dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tvGreeting"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/hey_ready_to_hit_the_road"
+                        android:textStyle="bold"
+                        android:textSize="18sp"
+                        android:textColor="#1B1B1B"
+                        android:paddingBottom="12dp" />
+
+                    <!-- PICK UP AT -->
+                    <!-- Label -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/pick_up_at"
+                        android:textAllCaps="true"
+                        android:textSize="12sp"
+                        android:textColor="#9A9A9A"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="sans-serif-medium"/>
+
+                    <!-- Pill container -->
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/pillPickAt"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:layout_marginTop="6dp"
+                        app:cardCornerRadius="24dp"
+                        app:strokeColor="#CFCFCF"
+                        app:strokeWidth="1dp"
+                        app:cardUseCompatPadding="false"
+                        app:cardPreventCornerOverlap="true"
+                        android:backgroundTint="@android:color/transparent"
+                        android:elevation="0dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical"
+                            android:paddingStart="12dp"
+                            android:paddingEnd="12dp"
+                            android:foreground="?attr/selectableItemBackground"
+                            android:onClick='@{() -> viewModel.onPickLocationClick(true)}'>
+
+                            <ImageView
+                                android:layout_width="18dp"
+                                android:layout_height="18dp"
+                                app:srcCompat="@drawable/ic_location_on"
+                                app:tint="#707070"
+                                android:contentDescription="@string/pick_up_at" />
+
+                            <EditText
+                                android:id="@+id/etPickAt"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginStart="8dp"
+                                android:layout_weight="1"
+                                android:background="@null"
+                                android:focusable="false"
+                                android:inputType="none"
+                                android:hint="@string/pick_up_location"
+                                android:singleLine="true"
+                                android:ellipsize="end"
+                                android:textSize="@dimen/desc_font_size_14"
+                                android:textStyle="bold"
+                                android:text='@{viewModel.pickAt}'
+                                android:textColor="#1B1B1B"
+                                android:textColorHint="#9A9A9A"/>
+                        </LinearLayout>
+                    </com.google.android.material.card.MaterialCardView>
+
+
+                    <!-- DROP OFF AT -->
+                    <!-- Label -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/drop_off_at"
+                        android:textAllCaps="true"
+                        android:textSize="12sp"
+                        android:textColor="#9A9A9A"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="sans-serif-medium"/>
+
+                    <!-- Pill container -->
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/pillDropAt"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:layout_marginTop="6dp"
+                        app:cardCornerRadius="24dp"
+                        app:strokeColor="#CFCFCF"
+                        app:strokeWidth="1dp"
+                        app:cardUseCompatPadding="false"
+                        app:cardPreventCornerOverlap="true"
+                        android:backgroundTint="@android:color/transparent"
+                        android:elevation="0dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical"
+                            android:paddingStart="12dp"
+                            android:paddingEnd="12dp"
+                            android:foreground="?attr/selectableItemBackground"
+                            android:onClick='@{() -> viewModel.onPickLocationClick(false)}'>
+
+                            <ImageView
+                                android:layout_width="18dp"
+                                android:layout_height="18dp"
+                                app:srcCompat="@drawable/ic_location_on"
+                                app:tint="#707070"
+                                android:contentDescription="@string/drop_off_at" />
+
+                            <EditText
+                                android:id="@+id/etDropAt"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginStart="8dp"
+                                android:layout_weight="1"
+                                android:background="@null"
+                                android:focusable="false"
+                                android:inputType="none"
+                                android:hint="@string/drop_location"
+                                android:singleLine="true"
+                                android:ellipsize="end"
+                                android:text='@{viewModel.dropAt}'
+                                android:textSize="@dimen/desc_font_size_14"
+                                android:textStyle="bold"
+                                android:textColor="#1B1B1B"
+                                android:textColorHint="#9A9A9A"/>
+                        </LinearLayout>
+                    </com.google.android.material.card.MaterialCardView>
+
+
+                    <!-- PICKUP DATE + TIME -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:orientation="vertical">
+                        <!-- Label above the pill -->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/pick_up_on"
+                            android:textAllCaps="true"
+                            android:textSize="12sp"
+                            android:textColor="#9A9A9A"
+                            android:layout_marginTop="10dp"
+                            android:fontFamily="sans-serif-medium"/>
+
+                        <!-- Pill container with date + time -->
+                        <com.google.android.material.card.MaterialCardView
+                            android:id="@+id/pillPickUp"
+                            android:layout_width="match_parent"
+                            android:layout_height="48dp"
+                            android:layout_marginTop="6dp"
+                            app:cardCornerRadius="24dp"
+                            app:strokeColor="#CFCFCF"
+                            app:strokeWidth="1dp"
+                            app:cardUseCompatPadding="false"
+                            app:cardPreventCornerOverlap="true"
+                            android:backgroundTint="@android:color/transparent"
+                            android:elevation="0dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="horizontal"
+                                android:gravity="center_vertical">
+
+                                <!-- LEFT: Date -->
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:gravity="center_vertical"
+                                    android:paddingStart="12dp"
+                                    android:paddingEnd="8dp"
+                                    android:foreground="?attr/selectableItemBackground"
+                                    android:onClick='@{() -> viewModel.onPickDateClick(true)}'>
+
+                                    <ImageView
+                                        android:layout_width="18dp"
+                                        android:layout_height="18dp"
+                                        app:srcCompat="@drawable/ic_calender"
+                                        app:tint="#707070"
+                                        android:contentDescription="@string/pick_up_on"
+                                        tools:ignore="TooDeepLayout" />
+
+                                    <EditText
+                                        android:id="@+id/etPickupDate"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent"
+                                        android:layout_marginStart="8dp"
+                                        android:background="@null"
+                                        android:focusable="false"
+                                        android:hint="@string/date"
+                                        android:inputType="none"
+                                        android:text='@{viewModel.pickDate}'
+                                        android:textStyle="bold"
+                                        android:textSize="14sp"
+                                        android:textColor="#1B1B1B"
+                                        android:textColorHint="#9A9A9A"
+                                        tools:ignore="TextFields" />
+                                </LinearLayout>
+
+                                <!-- Divider -->
+                                <View
+                                    android:layout_width="1dp"
+                                    android:layout_height="24dp"
+                                    android:background="#CFCFCF" />
+
+                                <!-- RIGHT: Time -->
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:gravity="center_vertical"
+                                    android:paddingStart="8dp"
+                                    android:paddingEnd="12dp"
+                                    android:foreground="?attr/selectableItemBackground"
+                                    android:onClick='@{() -> viewModel.onPickTimeClick(true)}'>
+
+                                    <ImageView
+                                        android:layout_width="18dp"
+                                        android:layout_height="18dp"
+                                        app:srcCompat="@drawable/time"
+                                        app:tint="#707070"
+                                        android:contentDescription="@string/time" />
+
+                                    <EditText
+                                        android:id="@+id/etPickupTime"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent"
+                                        android:layout_marginStart="8dp"
+                                        android:background="@null"
+                                        android:hint="@string/time"
+                                        android:focusable="false"
+                                        android:inputType="none"
+                                        android:text='@{viewModel.pickTime}'
+                                        android:textStyle="bold"
+                                        android:textSize="@dimen/desc_font_size_14"
+                                        android:textColor="#1B1B1B"
+                                        android:textColorHint="#9A9A9A"
+                                        tools:ignore="LabelFor" />
+                                </LinearLayout>
+                            </LinearLayout>
+                        </com.google.android.material.card.MaterialCardView>
+
+
+                    </LinearLayout>
+
+                    <!-- DROP DATE + TIME -->
+                    <!-- Label -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/drop_off_on"
+                        android:textAllCaps="true"
+                        android:textSize="12sp"
+                        android:textColor="#9A9A9A"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="sans-serif-medium"/>
+
+                    <!-- Rounded pill with Date | Time -->
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/pillDropOff"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:layout_marginTop="6dp"
+                        app:cardCornerRadius="24dp"
+                        app:strokeColor="#CFCFCF"
+                        app:strokeWidth="1dp"
+                        app:cardUseCompatPadding="false"
+                        app:cardPreventCornerOverlap="true"
+                        android:backgroundTint="@android:color/transparent"
+                        android:elevation="0dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical">
+
+                            <!-- LEFT: Drop date (click opens date+time flow) -->
+                            <LinearLayout
+                                android:id="@+id/sectionDropDate"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="center_vertical"
+                                android:paddingStart="12dp"
+                                android:paddingEnd="8dp"
+                                android:foreground="?attr/selectableItemBackground"
+                                android:onClick='@{() -> viewModel.onDropDateClick(true)}'>
+
+                                <ImageView
+                                    android:layout_width="18dp"
+                                    android:layout_height="18dp"
+                                    app:srcCompat="@drawable/ic_calender"
+                                    app:tint="#707070"
+                                    android:contentDescription="@string/drop_off_on" />
+
+                                <EditText
+                                    android:id="@+id/etDropDate"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginStart="8dp"
+                                    android:background="@null"
+                                    android:focusable="false"
+                                    android:inputType="none"
+                                    android:hint="@string/drop_date"
+                                    android:text='@{viewModel.dropDate}'
+                                    android:textStyle="bold"
+                                    android:textSize="@dimen/desc_font_size_14"
+                                    android:textColor="#1B1B1B"
+                                    android:textColorHint="#9A9A9A"
+                                    tools:ignore="TextFields" />
+                            </LinearLayout>
+
+                            <!-- Divider -->
+                            <View
+                                android:layout_width="1dp"
+                                android:layout_height="24dp"
+                                android:background="#CFCFCF" />
+
+                            <!-- RIGHT: Drop time (click opens date+time flow) -->
+                            <LinearLayout
+                                android:id="@+id/sectionDropTime"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="center_vertical"
+                                android:paddingStart="8dp"
+                                android:paddingEnd="12dp"
+                                android:foreground="?attr/selectableItemBackground"
+                                android:onClick='@{() -> viewModel.onDropTimeClick(true)}'>
+
+                                <ImageView
+                                    android:layout_width="18dp"
+                                    android:layout_height="18dp"
+                                    app:srcCompat="@drawable/ic_time"
+                                    app:tint="#707070"
+                                    android:contentDescription="@string/time" />
+
+                                <EditText
+                                    android:id="@+id/etDropTime"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginStart="8dp"
+                                    android:background="@null"
+                                    android:focusable="false"
+                                    android:inputType="none"
+                                    android:hint="@string/drop_time"
+                                    android:text='@{viewModel.dropTime}'
+                                    android:textStyle="bold"
+                                    android:textSize="@dimen/desc_font_size_14"
+                                    android:textColor="#1B1B1B"
+                                    android:textColorHint="#9A9A9A"/>
+                            </LinearLayout>
+                        </LinearLayout>
+                    </com.google.android.material.card.MaterialCardView>
+
+
+                    <!-- SEARCH BUTTON -->
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnSearch"
+                        style="@style/Widget.Material3.Button"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:layout_marginTop="14dp"
+                        android:textSize="@dimen/desc_font_size_16"
+                        android:text="@string/search_car"
+                        app:cornerRadius="24dp"
+                        app:backgroundTint="#2E7D32"
+                        android:onClick='@{() -> viewModel.onSearchClick()}' />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:paddingTop="16dp"
+                android:paddingBottom="8dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/why_aya_rental"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    android:layout_marginBottom="@dimen/app_spacing_5dp"
+                    android:layout_gravity="center"
+                    android:paddingBottom="8dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:baselineAligned="false"
+                    android:gravity="start"
+                    android:orientation="horizontal">
+
+                    <!-- Four quick stats -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        tools:ignore="UseCompoundDrawables">
+                        <ImageView
+                            android:layout_width="28dp"
+                            android:layout_height="28dp"
+                            app:srcCompat="@drawable/guarantee"
+                            tools:ignore="ContentDescription" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/_100" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        tools:ignore="UseCompoundDrawables">
+                        <ImageView
+                            android:layout_width="28dp"
+                            android:layout_height="28dp"
+                            app:srcCompat="@drawable/time"
+                            tools:ignore="ContentDescription" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/delivery" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        tools:ignore="UseCompoundDrawables">
+                        <ImageView
+                            android:layout_width="28dp"
+                            android:layout_height="28dp"
+                            app:srcCompat="@drawable/clock"
+                            tools:ignore="ContentDescription" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/endless" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        tools:ignore="UseCompoundDrawables">
+                        <ImageView
+                            android:layout_width="28dp"
+                            android:layout_height="28dp"
+                            app:srcCompat="@drawable/appreciation"
+                            tools:ignore="ContentDescription" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/_25k" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="24dp" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</layout>

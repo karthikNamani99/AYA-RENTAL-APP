@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    android:width="360dp"
+    android:height="640dp"
+    android:viewportWidth="360"
+    android:viewportHeight="640">
+
+    <!-- White background -->
+    <path
+        android:fillColor="#FFFFFFFF"
+        android:pathData="M0,0 H360 V640 H0 Z" />
+
+
+
+    <!-- Light gray road line (reversed slope) -->
+    <path
+        android:pathData="M-60,15 L360,120 360,140 -20,45 Z">
+        <aapt:attr name="android:fillColor">
+            <gradient
+                android:type="linear"
+                android:startX="30"
+                android:startY="84"
+                android:endX="12"
+                android:endY="9">
+                <item android:offset="0" android:color="#EDEDED"/>
+                <item android:offset="1" android:color="#DADADA"/>
+            </gradient>
+        </aapt:attr>
+    </path>
+
+    <!-- Yellow road line (reversed slope) -->
+    <path
+        android:pathData="M -140,8 L260,218 360,310 -20,93 Z">
+        <aapt:attr name="android:fillColor">
+            <gradient
+                android:type="linear"
+                android:startX="280"
+                android:startY="98"
+                android:endX="0"
+                android:endY="1">
+                <item android:offset="0" android:color="#EDE5D6"/>
+                <item android:offset="1" android:color="#D9980B"/>
+            </gradient>
+        </aapt:attr>
+    </path>
+
+    <!-- YELLOW WAVE (bottom) -->
+    <path
+        android:pathData="M0,260
+                          C -10,230 40,320 140,310
+                          C 240,300 250,140 360,200
+                          L360,640 L0,640 Z">
+        <aapt:attr name="android:fillColor">
+            <gradient
+                android:type="linear"
+                android:startX="0" android:startY="280"
+                android:endX="0"   android:endY="640">
+                <item android:offset="0.0" android:color="#FFF6C342"/>
+                <item android:offset="1.0" android:color="#FFE2A21A"/>
+            </gradient>
+        </aapt:attr>
+    </path>
+</vector>

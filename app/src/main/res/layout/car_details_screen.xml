@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <!-- Optional: bind from a VM -->
+        <variable
+            name="vm"
+            type="com.sapotos.ayarental.presentation.cardetails.CarDetailsScreen_View_Model" />
+    </data>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#F4F5F7"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Header -->
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="12dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:paddingBottom="8dp">
+
+                        <ImageButton
+                            android:id="@+id/btnBack"
+                            style="?attr/borderlessButtonStyle"
+                            android:layout_width="36dp"
+                            android:layout_height="36dp"
+                            app:srcCompat="@drawable/ic_back"
+                            tools:ignore="ContentDescription" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/car_details"
+                            android:textStyle="bold"
+                            android:textSize="18sp" />
+                    </LinearLayout>
+
+                    <!-- Hero car -->
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:id="@+id/imgCar"
+                        android:layout_width="match_parent"
+                        android:layout_height="170dp"
+                        android:scaleType="fitCenter"
+                        app:srcCompat="@drawable/suv" />
+                </LinearLayout>
+
+            <!-- Name + price and Specs block -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                app:cardCornerRadius="16dp"
+                app:cardUseCompatPadding="true"
+                app:cardBackgroundColor="@android:color/white">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <!-- Title row -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="12dp"
+                        android:gravity="center_vertical">
+
+                        <TextView
+                            android:id="@+id/tvName"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/tesla_model_3"
+                            android:textStyle="bold"
+                            android:textSize="18sp"
+                            android:textColor="#222222" />
+
+
+
+                            <TextView
+                                android:id="@+id/tvPrice"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/_30_day"
+                                android:textStyle="bold"
+                                android:textSize="14sp"
+                                android:textColor="#222222" />
+                    </LinearLayout>
+
+                    <!-- Divider -->
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="#503535" />
+
+                    <!-- Specifications title -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="@string/specifications"
+                        android:textStyle="bold"
+
+                        android:paddingLeft="12dp"
+                        android:textSize="14sp"
+                        android:textColor="#2B2B2B" />
+
+                    <!-- Specs grid 3x? -->
+                    <androidx.gridlayout.widget.GridLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        app:alignmentMode="alignMargins"
+                        app:columnCount="3"
+                        app:rowCount="2"
+                        app:useDefaultMargins="true">
+
+                        <include
+                            android:id="@+id/specSpeed"
+                            layout="@layout/item_spec_chip"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            app:layout_columnWeight="1"
+                            app:layout_rowWeight="1" />
+
+                        <include
+                            android:id="@+id/specWifi"
+                            layout="@layout/item_spec_chip"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            app:layout_columnWeight="1"
+                            app:layout_rowWeight="1" />
+
+                        <include
+                            android:id="@+id/specSeats"
+                            layout="@layout/item_spec_chip"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            app:layout_columnWeight="1"
+                            app:layout_rowWeight="1" />
+
+                        <include
+                            android:id="@+id/specSensor"
+                            layout="@layout/item_spec_chip"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            app:layout_columnWeight="1"
+                            app:layout_rowWeight="1" />
+
+                        <include
+                            android:id="@+id/specBt"
+                            layout="@layout/item_spec_chip"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            app:layout_columnWeight="1"
+                            app:layout_rowWeight="1" />
+
+                        <include
+                            android:id="@+id/specDoors"
+                            layout="@layout/item_spec_chip"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            app:layout_columnWeight="1"
+                            app:layout_rowWeight="1" />
+                    </androidx.gridlayout.widget.GridLayout>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</layout>

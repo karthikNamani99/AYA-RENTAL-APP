@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="vm"
+            type="com.sapotos.ayarental.presentation.successfullBookingScreen.SuccessFullBookingScreen_View_Model"/>
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#F4F5F7">
+
+        <!-- Big rounded white card -->
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="18dp">
+
+                <!-- Tick -->
+                <ImageView
+                    android:layout_width="72dp"
+                    android:layout_height="72dp"
+                    android:layout_gravity="center_horizontal"
+                    app:srcCompat="@drawable/ic_check_circle_24"
+                    app:tint="#2E7D32"
+                    tools:ignore="ContentDescription"/>
+
+                <!-- Title -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/booked_successfully"
+                    android:textColor="#2E7D32"
+                    android:textStyle="bold"
+                    android:textSize="18sp"/>
+
+                <!-- Subtitle -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:gravity="center"
+                    android:text="@string/booking_success_desc"
+                    android:textColor="#6B6B6B"
+                    android:textSize="14sp"/>
+
+                <!-- Summary box -->
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    app:strokeColor="#9E9E9E"
+                    app:strokeWidth="1dp"
+                    app:cardCornerRadius="12dp"
+                    app:cardUseCompatPadding="true">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="14dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/summary"
+                            android:textStyle="bold"
+                            android:textSize="15sp"/>
+
+                        <TextView
+                            android:id="@+id/tvCar"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:text='@{vm.carName}'
+                            android:textSize="14sp"
+                            android:textColor="#202020"
+                            tools:text="Mercedes Benz w176"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:textStyle="bold"
+                            android:text="@string/pickup_and_return"
+                            android:textSize="13sp"/>
+
+                        <TextView
+                            android:id="@+id/tvLocs"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text='@{vm.pickupReturnLine}'
+                            android:textSize="14sp"
+                            android:textColor="#404040"
+                            tools:text="Washington Manchester - Same location"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:textStyle="bold"
+                            android:text="@string/trip_dates"
+                            android:textSize="13sp"/>
+
+                        <TextView
+                            android:id="@+id/tvDates"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text='@{vm.tripDatesLine}'
+                            android:textSize="14sp"
+                            android:textColor="#404040"
+                            tools:text="Thu 15 April, 11:00 am - Sat 17 April, 6:00 pm"/>
+
+                        <TextView
+                            android:id="@+id/tvPerDay"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:text='@{vm.oneDayRentLine}'
+                            android:textSize="14sp"
+                            android:textColor="#404040"
+                            tools:text="One day rent: $200"/>
+
+                        <TextView
+                            android:id="@+id/tvDaysTotal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text='@{vm.totalDaysLine}'
+                            android:textSize="14sp"
+                            android:textColor="#404040"
+                            tools:text="Total of 3 days: $600"/>
+
+                        <TextView
+                            android:id="@+id/tvFees"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="6dp"
+                            android:text='@{vm.totalFeesLine}'
+                            android:textSize="15sp"
+                            android:textStyle="bold"
+                            android:textColor="#2E7D32"
+                            tools:text="Total Fees: $600.00"/>
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <!-- Bottom button with small chip over it -->
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="18dp">
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnDone"
+                        style="@style/Widget.MaterialComponents.Button"
+                        android:layout_width="match_parent"
+                        android:layout_height="52dp"
+                        android:text="@string/confirm_booking_btn"
+                        android:textAllCaps="false"
+                        app:cornerRadius="26dp"
+                        app:backgroundTint="#2E7D32"/>
+
+                    <!-- Floating chip -->
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="36dp"
+                        android:layout_gravity="center_horizontal"
+                        android:translationY="-18dp"
+                        app:cardCornerRadius="18dp"
+                        app:cardBackgroundColor="@android:color/white"
+                        app:strokeWidth="0dp"
+                        android:elevation="2dp">
+
+
+                    </com.google.android.material.card.MaterialCardView>
+                </FrameLayout>
+            </LinearLayout>
+
+        <!-- Back icon in the corner (optional) -->
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

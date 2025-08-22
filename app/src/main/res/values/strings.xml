@@ -1,0 +1,219 @@
+<resources>
+    <string name="app_name">AYA RENTALS</string>
+    <string name="drop_off_on">DROP OFF ON</string>
+    <string name="empty_string">" "</string>
+    <string name="pick_up_on">PICK UP ON</string>
+    <string name="drop_off_at">DROP OFF AT</string>
+    <string name="hey_ready_to_hit_the_road">Hey, Ready to hit the road?</string>
+    <string name="pick_up_at">PICK UP AT</string>
+    <string name="_100">100%</string>
+    <string name="delivery">Delivery</string>
+    <string name="endless">Endless</string>
+    <string name="_25k">25k+</string>
+    <string name="why_aya_rental">WHY AYA Rental?</string>
+    <string name="search_car">SEARCH CAR</string>
+    <string name="time">Pickup Time</string>
+    <string name="date">Pickup Date</string>
+    <string name="drop_date">Drop Date</string>
+    <string name="drop_time">Drop Time</string>
+    <string name="drop_location">Enter Drop Location</string>
+    <string name="pick_up_location">Enter PickUp Location</string>
+    <string name="login">Login</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="quote_your_pickup_or_ride_at_na_low_price">Quote your pickup or ride at\na low price</string>
+    <string name="by_signing_up_you_accept_our_terms_and_conditions_and_privacy_policy">By signing up, you accept our Terms and Conditions and Privacy Policy.\nThis information is collected by COMUTO SA for the purposes of creating account, managing your booking, using and improving our services and ensuring the security of our platform.
+        \nYou have rights on your personal data and can exercise them by contacting UD Car Rental through our Contact form. You can learn more about your rights and how we handle your personal data in our Privacy Policy.</string>
+    <string name="how_do_you_want_to_sign_up">How do you want to sign up?</string>
+    <string name="already_a_member">Already a member?</string>
+    <string name="sign_up_with_your_email">Sign up with your email</string>
+    <string name="register">Register</string>
+    <string name="by_creating_an_account_you_agree_to_our_terms_and_conditions_and_privacy_policy">By creating an account you agree to our Terms and Conditions and Privacy Policy</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="password">Password</string>
+    <string name="mobile_number">Mobile Number</string>
+    <string name="email">Email</string>
+    <string name="full_name">Full Name</string>
+    <string name="low_cost">Low Cost</string>
+    <string name="normal_cost">Normal Cost</string>
+    <string name="explore_our_tribe">EXPLORE OUR TRIBE</string>
+    <string name="aya_rental_stories">AYA Rental Stories</string>
+    <string name="john_doe">John Doe</string>
+    <string name="amazing_experience_highly_recommend">Amazing experience! Highly recommend.</string>
+    <string name="luxury">Luxury</string>
+    <string name="economy">Economy</string>
+    <string name="compact">Compact</string>
+    <string name="mahindra_thar">Mahindra Thar</string>
+    <string name="select_subcategory">Select SubCategory</string>
+    <string name="suv">SUV</string>
+    <string name="hatchback">Hatchback</string>
+    <string name="book_now">Book Now\n</string>
+    <string name="more_images">More Images</string>
+    <string name="description">Description</string>
+    <string name="car_details">Car Details</string>
+    <string name="specifications">Specifications</string>
+    <string name="a_car_with_high_specs_that_are_rented_at_an_affordable_price">A car with high specs that are rented at an affordable price</string>
+
+    <string name="booking_information">Booking information</string>
+    <string name="back">Back</string>
+    <string name="with_driver">With driver</string>
+    <string name="choose_pick_up_location">Choose pick up location</string>
+    <string name="choose_return_location">Choose return location</string>
+    <string name="select_pick_up_date_time">Select pick up date and time</string>
+    <string name="select_return_date_time">Select return date and time</string>
+    <string name="continue_text">Continue</string>
+    <string name="_30_day">$30/day</string>
+    <string name="tesla_model_3">Tesla Model 3</string>
+    <string name="top_speed">TOP SPEED</string>
+
+    <string name="identification">Identification</string>
+    <string name="national_id">National ID</string>
+    <string name="passport">Passport</string>
+    <string name="national_id_number">National ID Number</string>
+    <string name="upload_id_photo">Upload your ID photo</string>
+    <string name="front">Front</string>
+    <string name="back_label">Back</string>
+    <string name="saved_ok">Saved</string>
+    <string name="fill_all">Please enter your ID number.</string>
+    <string name="passport_number">Passport Number</string>
+
+    <string name="confirmation">Confirmation</string>
+    <string name="return_location">Return location</string>
+    <string name="pick_up_date_and_time">Pick up date and time</string>
+    <string name="return_date_and_time">Return date and time</string>
+    <string name="per_day_car_rent">Per day car rent</string>
+    <string name="total_payment">Total payment</string>
+    <string name="confirm">Confirm</string>
+
+    <string name="booked_successfully">Booked Successfully</string>
+    <string name="booking_success_desc">Your booking has been confirmed. A confirmation email will be sent shortly.</string>
+    <string name="summary">Summary</string>
+    <string name="pickup_and_return">Pick-up and Return:</string>
+    <string name="trip_dates">Trip Dates:</string>
+    <string name="confirm_booking_btn">Booking Confirmed!</string>
+    <string name="booking_confirmed_chip">Booking Confirmed!</string>
+
+
+    <string name="title_terms">Terms &amp; Conditions</string>
+    <string name="title_privacy">Privacy Policy</string>
+
+    <!-- Full Privacy content -->
+    <string name="privacy_full_text"><![CDATA[
+Privacy Policy for AYA Rental App
+Effective Date: [Insert Date]
+
+This Privacy Policy explains how AYA Rental collects, uses, shares, and protects your personal information when you use our mobile app and services.
+
+1. Information We Collect
+We may collect the following types of information:
+• Personal Info: Name, email address, phone number, driver’s license, date of birth.
+• Payment Info: Credit/debit card details (processed via secure third-party payment gateway).
+• Location Data: GPS location for vehicle tracking and service delivery.
+• Usage Data: App interactions, device type, operating system.
+
+2. How We Use Your Information
+We use your data to:
+• Create and manage user accounts.
+• Process bookings and payments.
+• Communicate with you about your reservations.
+• Improve app functionality and user experience.
+• Comply with legal requirements.
+
+3. Sharing of Information
+We may share your information with:
+• Service providers (e.g., payment processors, customer support).
+• Law enforcement or regulatory authorities if required by law.
+• Insurance providers in case of accidents or damage claims.
+
+4. Data Security
+We implement reasonable security measures to protect your information. However, no method of transmission over the internet is 100% secure.
+
+5. Data Retention
+We retain your personal data for as long as necessary to fulfill the purposes outlined in this policy, unless a longer retention period is required by law.
+
+6. Your Rights
+Depending on your jurisdiction, you may have rights to access, correct, or delete your personal data. Contact us at [Insert Email] to make a request.
+
+7. Cookies & Tracking
+The App may use cookies and similar technologies to enhance your experience and gather usage analytics.
+    ]]></string>
+    <string name="profile">Profile</string>
+    <string name="edit_profile">Edit Profile</string>
+    <string name="my_booking">My Booking</string>
+    <string name="notifications">Notifications</string>
+    <string name="settings">Settings</string>
+    <string name="terms_and_conditions">Terms and Conditions</string>
+    <string name="faqs">FAQs</string>
+    <string name="customer_support">Customer Support</string>
+    <string name="rate_us">Rate Us</string>
+    <string name="logout">Logout</string>
+    <string name="not_registered_signup_now">Not yet registered? SignUp Now</string>
+    <string name="coming_soon">Coming Soon</string>
+    <string name="remove_image">Remove image</string>
+    <string name="gallery">Gallery</string>
+    <string name="camera">Camera</string>
+    <string name="change_profile_photo">Change Profile Photo</string>
+    <string name="update">Update</string>
+    <string name="address">Address</string>
+    <string name="phone_number">Phone number</string>
+    <string name="name">Name</string>
+    <string name="change">Change</string>
+    <string name="profile_photo">Profile Photo</string>
+    <string name="support_email_subject">Hou can I Help you.......</string>
+    <string name="send_email">Successfull sent a mail</string>
+    <string name="how_can_we_help_you">How can we help you?</string>
+    <string name="email_id">Email Id</string>
+    <string name="submit">Submit</string>
+    <string name="skip">Skip</string>
+    <string name="please_rate_your_experience">Please rate your experience</string>
+    <string name="dark_mode">Dark mode</string>
+    <string name="enable_dark_mode_for_better_visibility_in_low_light_conditions">Enable dark mode for better visibility in low light conditions.</string>
+    <string name="stay_updated_with_the_latest_features_for_a_seamless_rental_experience">Stay updated with the latest features for a seamless rental experience.</string>
+    <string name="application_update">Application update</string>
+    <string name="get_instant_updates_about_your_bookings_and_exclusive_offers">Get instant updates about your bookings and exclusive offers.</string>
+    <string name="push_notification">Push notification</string>
+    <string name="app_settings">App settings</string>
+
+
+    <string name="tc_body" formatted="false"><![CDATA[
+1. Introduction
+Welcome to AYA Rental Car. These Terms and Conditions ("Terms") govern your use of the AYA Rental mobile application (the "App") and any services provided through it. By using our App, you agree to be bound by these Terms. If you do not agree, do not use the App.
+
+2. Eligibility
+You must be at least 21 years old and hold a valid drivers license to rent a vehicle using our service. Additional age or license restrictions may apply depending on your location.
+
+3. User Account
+To access our services, you must create an account with accurate and complete information. You are responsible for safeguarding your account credentials.
+
+4. Booking & Payment
+All vehicle rentals are subject to availability.
+Users must pay at the time of booking through accepted payment methods.
+Prices shown include applicable taxes unless stated otherwise.
+
+5. Cancellation & Refunds
+Cancellations made at least 48 hours before the scheduled pickup time may be eligible for a full refund.
+Late cancellations or no-shows may be non-refundable.
+
+6. Vehicle Use
+You agree to use the rented vehicle responsibly and return it in the same condition.
+You are liable for any traffic violations, tolls, or damages incurred during the rental period.
+
+7. Prohibited Conduct
+You may not:
+• Use the vehicle for unlawful purposes.
+• Sublet or transfer your booking to another person.
+• Tamper with the vehicle or its tracking system.
+
+8. Limitation of Liability
+AYA Rental Car is not liable for any indirect, incidental, or consequential damages arising from your use of the App or our vehicles.
+
+9. Termination
+We reserve the right to suspend or terminate your access to the App if you violate these Terms.
+
+10. Changes to Terms
+We may update these Terms at any time. Continued use of the App after changes means you accept the new Terms.
+
+11. Governing Law
+These Terms are governed by the laws of [Insert Jurisdiction]. Any disputes shall be resolved in the courts of Douala Cameroon.
+    ]]></string>
+    <string name="privacy_policy">Privacy Policy</string>
+</resources>

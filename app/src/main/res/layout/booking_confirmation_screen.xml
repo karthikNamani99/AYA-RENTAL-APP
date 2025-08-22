@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.sapotos.ayarental.presentation.booking.BookingConfirmation_View_Model" />
+    </data>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#F4F5F7"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <!-- Header -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical">
+
+                        <ImageButton
+                            android:id="@+id/btnBack"
+                            style="?attr/borderlessButtonStyle"
+                            android:layout_width="36dp"
+                            android:layout_height="36dp"
+                            app:srcCompat="@drawable/ic_back"
+                            android:contentDescription="@string/back" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:text="@string/booking_information"
+                            android:textStyle="bold"
+                            android:textSize="18sp"/>
+                    </LinearLayout>
+
+                    <!-- Car image -->
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="160dp"
+                        android:layout_marginTop="8dp"
+                        android:scaleType="fitCenter"
+                        android:id="@+id/imgCar"
+                        app:srcCompat="@drawable/suv"
+                        app:shapeAppearanceOverlay="@style/Shape.Pill"/>
+
+                    <!-- With driver -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:gravity="center_vertical">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/with_driver"
+                            android:textSize="14sp"
+                            android:textColor="#222222"/>
+
+                        <com.google.android.material.materialswitch.MaterialSwitch
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checked='@={viewModel.withDriver}'/>
+                    </LinearLayout>
+
+                    <!-- Fields -->
+                    <!-- 1. Pickup location -->
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:hint="@string/choose_pick_up_location"
+                        app:boxStrokeColor="#DDDDDD"
+                        app:boxBackgroundColor="#FFFFFFFF"
+                        app:boxCornerRadiusTopStart="16dp"
+                        app:boxCornerRadiusTopEnd="16dp"
+                        app:boxCornerRadiusBottomStart="16dp"
+                        app:boxCornerRadiusBottomEnd="16dp"
+                        app:endIconMode="custom"
+                        app:endIconDrawable="@drawable/ic_location_on"
+                        app:endIconTint="#707070">
+
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etPickLocation"
+                            android:layout_width="match_parent"
+                            android:layout_height="55dp"
+                            android:background="@null"
+                            android:singleLine="true"
+                            android:imeOptions="actionNext"
+                            android:inputType="textCapWords|textNoSuggestions"
+                            android:autofillHints="postalAddress"
+                            android:text='@={viewModel.pickLocation}'/>
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <!-- 2. Return location -->
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:hint="@string/choose_return_location"
+                        app:boxStrokeColor="#DDDDDD"
+                        app:boxBackgroundColor="#FFFFFFFF"
+                        app:boxCornerRadiusTopStart="16dp"
+                        app:boxCornerRadiusTopEnd="16dp"
+                        app:boxCornerRadiusBottomStart="16dp"
+                        app:boxCornerRadiusBottomEnd="16dp"
+                        app:endIconMode="custom"
+                        app:endIconDrawable="@drawable/ic_location_on"
+                        app:endIconTint="#707070">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etReturnLocation"
+                            android:layout_width="match_parent"
+                            android:layout_height="55dp"
+                            android:background="@null"
+                            android:singleLine="true"
+                            android:imeOptions="actionNext"
+                            android:inputType="textCapWords|textNoSuggestions"
+                            android:autofillHints="postalAddress"
+                            android:text='@={viewModel.returnLocation}'/>
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <!-- 3. Pickup date & time -->
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:hint="@string/select_pick_up_date_time"
+                        app:boxStrokeColor="#DDDDDD"
+                        app:boxBackgroundColor="#FFFFFFFF"
+                        app:boxCornerRadiusTopStart="16dp"
+                        app:boxCornerRadiusTopEnd="16dp"
+                        app:boxCornerRadiusBottomStart="16dp"
+                        app:boxCornerRadiusBottomEnd="16dp"
+                        app:endIconMode="custom"
+                        app:endIconDrawable="@drawable/ic_calender"
+                        app:endIconTint="#707070">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etPickDateTime"
+                            android:layout_width="match_parent"
+                            android:layout_height="55dp"
+                            android:background="@null"
+                            android:focusable="false"
+                            android:singleLine="true"
+                            android:text='@={viewModel.pickDateTime}'/>
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <!-- 4. Return date & time -->
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:hint="@string/select_return_date_time"
+                        app:boxStrokeColor="#DDDDDD"
+                        app:boxBackgroundColor="#FFFFFFFF"
+                        app:boxCornerRadiusTopStart="16dp"
+                        app:boxCornerRadiusTopEnd="16dp"
+                        app:boxCornerRadiusBottomStart="16dp"
+                        app:boxCornerRadiusBottomEnd="16dp"
+                        app:endIconMode="custom"
+                        app:endIconDrawable="@drawable/ic_calender"
+                        app:endIconTint="#707070">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etReturnDateTime"
+                            android:layout_width="match_parent"
+                            android:layout_height="55dp"
+                            android:background="@null"
+                            android:focusable="false"
+                            android:singleLine="true"
+                            android:text='@={viewModel.returnDateTime}'/>
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <!-- Continue -->
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnContinue"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:layout_marginTop="16dp"
+                        android:text="@string/continue_text"
+                        android:textAllCaps="false"
+                        app:cornerRadius="24dp"
+                        app:backgroundTint="#2E7D32"/>
+                </LinearLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</layout>
